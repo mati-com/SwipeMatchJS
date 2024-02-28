@@ -7,21 +7,74 @@
   box-sizing: border-box;
 }
 
-img, video, svg {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
 body {
   margin: 0;
   min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  user-select: none;
+  background: #e5e5e5;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+main {
+  background: url(images/iphone.webp) no-repeat;
+  background-size: contain;
+  width: 340px;
+  height: 640px;
+  display: flex;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0, 0.3));
 }
 
-p {
-  text-wrap: pretty;
+section {
+  background: #f6f6f6;
+  width: 100%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 16px 6px;
+  margin: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: center; 
+  
+  & img {
+    width: 24;
+    height: 24px;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid #ccc
+  }
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  & article {
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  & img {
+    
+  }
 }
